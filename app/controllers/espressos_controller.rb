@@ -3,7 +3,9 @@ class EspressosController < ApplicationController
 
   # GET /espressos
   def index
-    @espressos = Espresso.all
+    @search = Espresso.ransack(params[:q])
+    @search.sorts = 'id desc' if @search.sorts.empty?
+    @espressos = @search.result.page(params[:page])
   end
 
   # GET /espressos/1

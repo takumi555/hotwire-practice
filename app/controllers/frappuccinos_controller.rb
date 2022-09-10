@@ -3,7 +3,9 @@ class FrappuccinosController < ApplicationController
 
   # GET /frappuccinos
   def index
-    @frappuccinos = Frappuccino.all
+    @search = Frappuccino.ransack(params[:q])
+    @search.sorts = 'id desc' if @search.sorts.empty?
+    @frappuccinos = @search.result.page(params[:page])
   end
 
   # GET /frappuccinos/1

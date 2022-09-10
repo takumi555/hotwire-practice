@@ -3,7 +3,9 @@ class TeasController < ApplicationController
 
   # GET /teas
   def index
-    @teas = Tea.all
+    @search = Tea.ransack(params[:q])
+    @search.sorts = 'id desc' if @search.sorts.empty?
+    @coffees = @search.result.page(params[:page])
   end
 
   # GET /teas/1
