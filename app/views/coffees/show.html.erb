@@ -1,10 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div id="<%= dom_id @coffee %>">
+  <p>
+    <strong>名前:</strong>
+    <%= @cofee.name %>
+  </p>
 
-<%= render @coffee %>
+  <p>
+    <strong>説明:</strong>
+    <%= @coffee.age %>
+  </p>
+</div>
 
 <div>
-  <%= link_to "Edit this coffee", edit_coffee_path(@coffee) %> |
-  <%= link_to "Back to coffees", coffees_path %>
-
-  <%= button_to "Destroy this coffee", @coffee, method: :delete %>
+  <%= link_to "編集", edit_coffees_path(@coffee) %> |
+  <%= link_to "戻る", coffees_path %>
+  <%= button_to "削除", @coffee, method: :delete %>
 </div>

@@ -1,12 +1,14 @@
-<div id="<%= dom_id coffee %>">
-  <p>
-    <strong>Name:</strong>
+<div class="row py-2 border-top">
+  <div class="col-4 my-auto">
     <%= coffee.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
+  </div>
+  <div class="col-4 my-auto">
     <%= coffee.description %>
-  </p>
-
+  </div>
+  <div class="col-4">
+    <div class="d-flex justify-content-end">
+      <%= link_to "編集", edit_coffee_path(coffee), class: "btn btn-sm btn-outline-primary me-2" %>
+      <%= button_to "削除", coffee, method: :delete, class: "btn btn-sm btn-outline-danger" %>
+    </div>
+  </div>
 </div>
