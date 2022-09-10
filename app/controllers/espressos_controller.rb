@@ -35,7 +35,6 @@ class EspressosController < ApplicationController
   # PATCH/PUT /espressos/1
   def update
     if @espresso.update(espresso_params)
-      redirect_to @espresso, notice: "Espresso was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
