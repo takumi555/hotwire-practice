@@ -4,6 +4,7 @@ class CoffeesController < ApplicationController
   # GET /coffees
   def index
     @coffees = Coffee.all
+    @coffees = Coffee.page(params[:page])
   end
 
   # GET /coffees/1
