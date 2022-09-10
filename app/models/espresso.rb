@@ -1,0 +1,2 @@
+class Espresso < ApplicationRecord
+end

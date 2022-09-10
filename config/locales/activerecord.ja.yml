@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      coffee: コーヒー
+    attributes:
+      coffee:
+        name: 名前
+        description: 説明

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @frappuccino %>
+
+<div>
+  <%= link_to "Edit this frappuccino", edit_frappuccino_path(@frappuccino) %> |
+  <%= link_to "Back to frappuccinos", frappuccinos_path %>
+
+  <%= button_to "Destroy this frappuccino", @frappuccino, method: :delete %>
+</div>

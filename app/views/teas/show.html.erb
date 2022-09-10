@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tea %>
+
+<div>
+  <%= link_to "Edit this tea", edit_tea_path(@tea) %> |
+  <%= link_to "Back to teas", teas_path %>
+
+  <%= button_to "Destroy this tea", @tea, method: :delete %>
+</div>

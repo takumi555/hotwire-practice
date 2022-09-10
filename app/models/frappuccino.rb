@@ -1,0 +1,2 @@
+class Frappuccino < ApplicationRecord
+end
