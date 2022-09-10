@@ -5,12 +5,8 @@
 <%= search_form_for @search do |f| %>
   <%= f.label :name_cont, "名前" %>
   <%= f.search_field :name_cont %>
-
-  <%= f.label :body_cont, "説明" %>
-  <%= f.search_field :body_cont %>
   <%= f.submit %>
-
-  <%= link_to "クリア", cats_path %>
+  <%= link_to "クリア", coffees_path %>
 <% end %>
 
  <%= sort_link(@search, :name) %>
