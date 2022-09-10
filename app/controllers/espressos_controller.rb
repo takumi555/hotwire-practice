@@ -35,6 +35,7 @@ class EspressosController < ApplicationController
   # PATCH/PUT /espressos/1
   def update
     if @espresso.update(espresso_params)
+      flash.now.notice = "espressoを更新しました。"
     else
       render :edit, status: :unprocessable_entity
     end
